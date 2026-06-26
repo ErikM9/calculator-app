@@ -1,0 +1,24 @@
+{
+  "name": "a-simple-calculator",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A calculator with proper expression evaluation using postfix notation",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "cypress run",
+    "test:e2e:open": "cypress open",
+    "test:all": "npm run test:coverage && npm run test:e2e",
+    "serve": "npx serve src -l 3000"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^1.1.0",
+    "cypress": "^13.6.0",
+    "jsdom": "^23.0.1",
+    "vitest": "^1.1.0"
+  },
+  "keywords": ["calculator", "testing", "vitest", "cypress", "postfix", "shunting-yard"],
+  "author": "",
+  "license": "MIT"
+}

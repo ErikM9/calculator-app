@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+    <title>A Simple Calculator</title>
+  </head>
+  <body>
+    <div id="bg-border" class="border-animation">
+      <div class="math-example ex1">2 + 3 = 5</div>
+      <div class="math-example ex2">4 - 1 = 3</div>
+      <div class="math-example ex3">5 × 2 = 10</div>
+      <div class="math-example ex4">8 ÷ 4 = 2</div>
+      <div class="math-example ex5">√9 = 3</div>
+      <div class="math-example ex6">4<sup>2</sup> = 16</div>
+      <div class="math-example ex7">10 + 5 = 15</div>
+      <div class="math-example ex8">6 - 2 = 4</div>
+      <div class="math-example ex9">7 × 3 = 21</div>
+      <div class="math-example ex10">9 ÷ 3 = 3</div>
+    </div>
+
+    <h1>A Simple Calculator</h1>
+    <h2>You know what to do :)</h2>
+
+    <div id="calc-body">
+      <div id="screen-area">
+        <div id="screen-inner">
+          <div id="history-line"></div>
+          <div id="current-number">0</div>
+        </div>
+        <div id="error-msg" class="error-text"></div>
+      </div>
+
+      <div class="keypad">
+        <button id="reset-all" onclick="clearAll()" aria-label="Clear">AC</button>
+        <div class="empty-cell"></div>
+        <div class="empty-cell"></div>
+        
+        <button id="delete-last" onclick="removeLastChar()" aria-label="Backspace">⌫</button>
+        <button id="percent-btn" onclick="handleInput('percent')" aria-label="Percent">%</button>
+        <button id="power-two" onclick="handleInput('square')" aria-label="Square">x²</button>
+        <button id="square-root" onclick="handleInput('sqrt')" aria-label="Square Root">√</button>
+        <button id="divide-btn" onclick="handleInput('divide')">÷</button>
+
+        <button id="num-7" onclick="handleInput(7)">7</button>
+        <button id="num-8" onclick="handleInput(8)">8</button>
+        <button id="num-9" onclick="handleInput(9)">9</button>
+        <button id="multiply-btn" onclick="handleInput('multiply')">×</button>
+
+        <button id="num-4" onclick="handleInput(4)">4</button>
+        <button id="num-5" onclick="handleInput(5)">5</button>
+        <button id="num-6" onclick="handleInput(6)">6</button>
+        <button id="subtract-btn" onclick="handleInput('subtract')">-</button>
+
+        <button id="num-1" onclick="handleInput(1)">1</button>
+        <button id="num-2" onclick="handleInput(2)">2</button>
+        <button id="num-3" onclick="handleInput(3)">3</button>
+        <button id="add-btn" onclick="handleInput('add')">+</button>
+
+        <button id="sign-toggle" onclick="handleInput('toggle-sign')" aria-label="Toggle sign">±</button>
+        <button id="num-0" onclick="handleInput(0)">0</button>
+        <button id="decimal-btn" onclick="handleInput('decimal')">.</button>
+        <button id="equals-btn" onclick="handleInput('equals')">=</button>
+      </div>
+    </div>
+
+    <script type="module" src="scripts.js"></script>
+  </body>
+</html>
