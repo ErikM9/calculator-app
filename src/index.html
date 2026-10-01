@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+    <title>A Simple Calculator</title>
+  </head>
+  <body>
+    <div id="bg-border" class="border-animation">
+      <div class="math-example ex1" data-spot="10% 5%">2 + 3 = 5</div>
+      <div class="math-example ex2" data-spot="10% 90%">4 - 1 = 3</div>
+      <div class="math-example ex3" data-spot="30% 25%">5 × 2 = 10</div>
+      <div class="math-example ex4" data-spot="40% 90%">8 ÷ 4 = 2</div>
+      <div class="math-example ex5" data-spot="50% 10%">√9 = 3</div>
+      <div class="math-example ex6" data-spot="60% 70%">4<sup>2</sup> = 16</div>
+      <div class="math-example ex7" data-spot="70% 5%">10 + 5 = 15</div>
+      <div class="math-example ex8" data-spot="80% 20%">6 - 2 = 4</div>
+      <div class="math-example ex9" data-spot="15% 70%">7 × 3 = 21</div>
+      <div class="math-example ex10" data-spot="85% 80%">9 ÷ 3 = 3</div>
+    </div>
+
+    <h1>A Simple Calculator</h1>
+    <h2>You know what to do :)</h2>
+
+    <div id="calc-body">
+      <div id="screen-area">
+        <div id="screen-inner" role="status" aria-live="polite" aria-atomic="true">
+          <div id="history-line"></div>
+          <div id="current-number">0</div>
+        </div>
+        <div id="error-msg" class="error-text" role="alert"></div>
+      </div>
+
+      <div class="keypad">
+        <button id="reset-all" data-action="clear" aria-label="AC, all clear">AC</button>
+        <div class="empty-cell"></div>
+        <div class="empty-cell"></div>
+        
+        <button id="delete-last" data-action="backspace" aria-label="Backspace">⌫</button>
+        <button id="percent-btn" data-action="percent" aria-label="Percent">%</button>
+        <button id="power-two" data-action="square" aria-label="x squared">x²</button>
+        <button id="square-root" data-action="sqrt" aria-label="Square Root">√</button>
+        <button id="divide-btn" data-action="divide" aria-label="Divide">÷</button>
+
+        <button id="num-7" data-action="7">7</button>
+        <button id="num-8" data-action="8">8</button>
+        <button id="num-9" data-action="9">9</button>
+        <button id="multiply-btn" data-action="multiply" aria-label="Multiply">×</button>
+
+        <button id="num-4" data-action="4">4</button>
+        <button id="num-5" data-action="5">5</button>
+        <button id="num-6" data-action="6">6</button>
+        <button id="subtract-btn" data-action="subtract" aria-label="Subtract">-</button>
+
+        <button id="num-1" data-action="1">1</button>
+        <button id="num-2" data-action="2">2</button>
+        <button id="num-3" data-action="3">3</button>
+        <button id="add-btn" data-action="add" aria-label="Add">+</button>
+
+        <button id="sign-toggle" data-action="toggle-sign" aria-label="Toggle sign">±</button>
+        <button id="num-0" data-action="0">0</button>
+        <button id="decimal-btn" data-action="decimal" aria-label="Decimal point">.</button>
+        <button id="equals-btn" data-action="equals" aria-label="Equals">=</button>
+      </div>
+    </div>
+
+    <script type="module" src="scripts.js"></script>
+  </body>
+</html>
